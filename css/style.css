@@ -1,0 +1,123 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, textarea, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: none;
+}
+
+blockquote, q {
+	background: #fafafa;
+	margin: 20px 0;
+	padding: 2.5rem 4rem;
+	position: relative;
+	word-wrap: break-word;
+}
+
+blockquote:before, q:before, blockquote:after, q:after {
+	content: '“';
+	font-size: 4rem;
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	font-family: "SimHei", sans-serif;
+}
+
+blockquote:after, q:after {
+	content: '”';
+	font-size: 4rem;
+	position: absolute;
+	top: initial;
+	left: initial;
+	bottom: -1rem;
+	right: 0;
+	font-family: "SimHei", sans-serif;
+}
+
+blockquote p, q p {
+	margin: 0!important;
+	padding: 0;
+	line-height: 1.8rem;
+	overflow: hidden;
+}
+
+body {
+	line-height: 1;
+	background: #FFF;
+	font-family: "Exo 2", "Trebuchet MS", "Helvetica", "Arial", 'PingFang SC', 'Hiragino Sans GB', 'STHeiti Light', 'Microsoft YaHei', 'SimHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+html, body {
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	-overflow-scrolling: touch;
+}
+
+.container {
+	max-width: 780px;
+	width: 96%;
+	margin: 0 auto;
+	padding: 0 2%;
+	position: relative;
+}
+
+.page-header {
+	margin: 4rem auto 6rem;
+	padding: 0 0 2rem 0;
+	position: relative;
+	color: #656D78;
+	font-size: .96rem
+}
+
+.logoText {
+	font-size: 1.8rem;
+	margin: 0;
+	font-weight: bold;
+	color: #434a54;
+	background: #fff;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+
+.subTitle {
+	margin-top: .8em;
+	font-size: 1.1rem;
+	color: #545253;
+}
+
+pre, .code {
+	font-family: "Courier New", "Verdana", "Trebuchet MS", "Helvetica", sans-serif;
+}
+
+.footerLine {
+	margin: 1em 0;
+	background-color: #ddd;
+	height: 1px;
+	border: none;
+}
+
+#footer {
+	position: relative;
+	line-height: 2rem;
+	font-size: .9rem;
+	padding-bottom: 1rem;
+	color: #5d5d5d
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}

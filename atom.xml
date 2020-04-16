@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>yemaster的博客</title>
+  
+  <subtitle>我是一个超级蒟蒻</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://yemaster.github.io/"/>
+  <updated>2020-04-15T03:16:02.148Z</updated>
+  <id>https://yemaster.github.io/</id>
+  
+  <author>
+    <name>yemaster</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python的json和time库</title>
+    <link href="https://yemaster.github.io/2020/04/15/json%E5%92%8Ctime%E5%BA%93/"/>
+    <id>https://yemaster.github.io/2020/04/15/json%E5%92%8Ctime%E5%BA%93/</id>
+    <published>2020-04-15T02:39:03.000Z</published>
+    <updated>2020-04-15T03:16:02.148Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="json库"><a href="#json库" class="headerlink" title="json库"></a>json库</h3><p>首先引入json库</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br></pre></td></tr></table></figure><p>这里我们只讲两个函数，json.dumps和json.loads：</p><table><thead><tr><th align="center">函数</th><th align="center">描述</th></tr></thead><tbody><tr><td align="center">json.dumps</td><td align="center">将Python对象编码成JSON字符串</td></tr><tr><td align="center">json.loads</td><td align="center">将JSON字符串解码成Python对象</td></tr></tbody></table><h4 id="json-dumps"><a href="#json-dumps" class="headerlink" title="json.dumps"></a>json.dumps</h4><h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json.dumps(obj, skipkeys=<span class="literal">False</span>, ensure_ascii=<span class="literal">True</span>, check_circular=<span class="literal">True</span>, allow_nan=<span class="literal">True</span>, cls=<span class="literal">None</span>, indent=<span class="literal">None</span>, separators=<span class="literal">None</span>, encoding=<span class="string">"utf-8"</span>, default=<span class="literal">None</span>, sort_keys=<span class="literal">False</span>, **kw)</span><br></pre></td></tr></table></figure><h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">data = [&#123; <span class="string">'a'</span> : <span class="number">1</span>, <span class="string">'b'</span> : <span class="number">2</span>, <span class="string">'c'</span> : <span class="number">3</span>, <span class="string">'d'</span> : <span class="number">4</span>, <span class="string">'e'</span> : <span class="number">5</span> &#125;]</span><br><span class="line"></span><br><span class="line">res = json.dumps(data)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><p>结果：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="attr">"a"</span>: <span class="number">1</span>, <span class="attr">"c"</span>: <span class="number">3</span>, <span class="attr">"b"</span>: <span class="number">2</span>, <span class="attr">"e"</span>: <span class="number">5</span>, <span class="attr">"d"</span>: <span class="number">4</span>&#125;]</span><br></pre></td></tr></table></figure><p>当然可以格式化输出</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">data = [&#123; <span class="string">'a'</span> : <span class="number">1</span>, <span class="string">'b'</span> : <span class="number">2</span>, <span class="string">'c'</span> : <span class="number">3</span>, <span class="string">'d'</span> : <span class="number">4</span>, <span class="string">'e'</span> : <span class="number">5</span> &#125;]</span><br><span class="line"></span><br><span class="line">res = json.dumps(data, sort_keys=<span class="literal">True</span>, indent=<span class="number">4</span>, separators=(<span class="string">','</span>, <span class="string">': '</span>))</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><p>结果：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">"a"</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="attr">"b"</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="attr">"c"</span>: <span class="number">3</span>,</span><br><span class="line">        <span class="attr">"d"</span>: <span class="number">4</span>,</span><br><span class="line">        <span class="attr">"e"</span>: <span class="number">5</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure><h4 id="json-loads"><a href="#json-loads" class="headerlink" title="json.loads"></a>json.loads</h4><h5 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json.loads(s[, encoding[, cls[, object_hook[, parse_float[, parse_int[, parse_constant[, object_pairs_hook[, **kw]]]]]]]])</span><br></pre></td></tr></table></figure><h5 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">data = <span class="string">'&#123;"a":1,"b":2,"c":3,"d":4,"e":5&#125;'</span>;</span><br><span class="line"></span><br><span class="line">res = json.loads(data)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><h3 id="time库"><a href="#time库" class="headerlink" title="time库"></a>time库</h3><p>首先引入time库</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br></pre></td></tr></table></figure><ol><li>获取当前时间戳</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">now = time.time()</span><br></pre></td></tr></table></figure><ol start="2"><li>时间戳转换为当地时间</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(time.localtime(time))</span><br></pre></td></tr></table></figure><ol start="3"><li>将时间戳格式化</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 转换为类似 2000-01-01 12:00:00的格式</span></span><br><span class="line">time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, time.localtime())</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;json库&quot;&gt;&lt;a href=&quot;#json库&quot; class=&quot;headerlink&quot; title=&quot;json库&quot;&gt;&lt;/a&gt;json库&lt;/h3&gt;&lt;p&gt;首先引入json库&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="python" scheme="https://yemaster.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://yemaster.github.io/2020/04/12/hello-world/"/>
+    <id>https://yemaster.github.io/2020/04/12/hello-world/</id>
+    <published>2020-04-12T03:02:51.344Z</published>
+    <updated>2020-04-14T11:57:52.142Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello, World"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+      <category term="test" scheme="https://yemaster.github.io/tags/test/"/>
+    
+  </entry>
+  
+</feed>
