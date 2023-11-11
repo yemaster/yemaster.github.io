@@ -1,0 +1,67 @@
+<h1 id="img-srchttpskatexorgimgkatex-logo-blacksvg-width130-altkatex"><a class="markdownIt-Anchor" href="#img-srchttpskatexorgimgkatex-logo-blacksvg-width130-altkatex"></a> <a href="https://katex.org/"><img src="https://katex.org/img/katex-logo-black.svg" width="130" alt="KaTeX"></a></h1>
+<p><a href="https://www.npmjs.com/package/katex"><img src="https://img.shields.io/npm/v/katex.svg" alt="npm" /></a><br />
+<a href="https://circleci.com/gh/KaTeX/KaTeX"><img src="https://circleci.com/gh/KaTeX/KaTeX.svg?style=shield" alt="CircleCI" /></a><br />
+<a href="https://codecov.io/gh/KaTeX/KaTeX"><img src="https://codecov.io/gh/KaTeX/KaTeX/branch/master/graph/badge.svg" alt="codecov" /></a><br />
+<a href="https://gitter.im/KaTeX/KaTeX?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/KaTeX/KaTeX" /></a><br />
+<a href="https://dependabot.com"><img src="https://api.dependabot.com/badges/status?host=github&amp;repo=KaTeX/KaTeX" alt="Dependabot Status" /></a><br />
+<a href="https://www.jsdelivr.com/package/npm/katex"><img src="https://data.jsdelivr.com/v1/package/npm/katex/badge?style=rounded" alt="jsDelivr" /></a><br />
+<img src="https://img.badgesize.io/KaTeX/KaTeX/v0.12.0/dist/katex.min.js?compression=gzip" alt="" /></p>
+<p>KaTeX is a fast, easy-to-use JavaScript library for TeX math rendering on the web.</p>
+<ul>
+<li><strong>Fast:</strong> KaTeX renders its math synchronously and doesn’t need to reflow the page. See how it compares to a competitor in <a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php">this speed test</a>.</li>
+<li><strong>Print quality:</strong> KaTeX’s layout is based on Donald Knuth’s TeX, the gold standard for math typesetting.</li>
+<li><strong>Self contained:</strong> KaTeX has no dependencies and can easily be bundled with your website resources.</li>
+<li><strong>Server side rendering:</strong> KaTeX produces the same output regardless of browser or environment, so you can pre-render expressions using Node.js and send them as plain HTML.</li>
+</ul>
+<p>KaTeX is compatible with all major browsers, including Chrome, Safari, Firefox, Opera, Edge, and IE 11.</p>
+<p>KaTeX supports much (but not all) of LaTeX and many LaTeX packages. See the <a href="https://katex.org/docs/supported.html">list of supported functions</a>.</p>
+<p>Try out KaTeX <a href="https://katex.org/#demo">on the demo page</a>!</p>
+<h2 id="getting-started"><a class="markdownIt-Anchor" href="#getting-started"></a> Getting started</h2>
+<h3 id="starter-template"><a class="markdownIt-Anchor" href="#starter-template"></a> Starter template</h3>
+<pre class="highlight"><code class="html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&quot;</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">&quot;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&quot;</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">&quot;anonymous&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">defer</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&quot;</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">&quot;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&quot;</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">&quot;anonymous&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">defer</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js&quot;</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">&quot;sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa&quot;</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">&quot;anonymous&quot;</span>
+        <span class="hljs-attr">onload</span>=<span class="hljs-string">&quot;renderMathInElement(document.body);&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>You can also <a href="https://github.com/KaTeX/KaTeX/releases">download KaTeX</a> and host it yourself.</p>
+<p>For details on how to configure auto-render extension, refer to <a href="https://katex.org/docs/autorender.html">the documentation</a>.</p>
+<h3 id="api"><a class="markdownIt-Anchor" href="#api"></a> API</h3>
+<p>Call <code>katex.render</code> to render a TeX expression directly into a DOM element.<br />
+For example:</p>
+<pre class="highlight"><code class="js">katex.<span class="hljs-title function_">render</span>(<span class="hljs-string">&quot;c = \\pm\\sqrt{a^2 + b^2}&quot;</span>, element, {
+    <span class="hljs-attr">throwOnError</span>: <span class="hljs-literal">false</span>
+});
+</code></pre>
+<p>Call <code>katex.renderToString</code> to generate an HTML string of the rendered math,<br />
+e.g., for server-side rendering.  For example:</p>
+<pre class="highlight"><code class="js"><span class="hljs-keyword">var</span> html = katex.<span class="hljs-title function_">renderToString</span>(<span class="hljs-string">&quot;c = \\pm\\sqrt{a^2 + b^2}&quot;</span>, {
+    <span class="hljs-attr">throwOnError</span>: <span class="hljs-literal">false</span>
+});
+<span class="hljs-comment">// &#x27;&lt;span class=&quot;katex&quot;&gt;...&lt;/span&gt;&#x27;</span>
+</code></pre>
+<p>Make sure to include the CSS and font files in both cases.<br />
+If you are doing all rendering on the server, there is no need to include the<br />
+JavaScript on the client.</p>
+<p>The examples above use the <code>throwOnError: false</code> option, which renders invalid<br />
+inputs as the TeX source code in red (by default), with the error message as<br />
+hover text.  For other available options, see the<br />
+<a href="https://katex.org/docs/api.html">API documentation</a>,<br />
+<a href="https://katex.org/docs/options.html">options documentation</a>, and<br />
+<a href="https://katex.org/docs/error.html">handling errors documentation</a>.</p>
+<h2 id="demo-and-documentation"><a class="markdownIt-Anchor" href="#demo-and-documentation"></a> Demo and Documentation</h2>
+<p>Learn more about using KaTeX <a href="https://katex.org">on the website</a>!</p>
+<h2 id="contributing"><a class="markdownIt-Anchor" href="#contributing"></a> Contributing</h2>
+<p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+<h2 id="license"><a class="markdownIt-Anchor" href="#license"></a> License</h2>
+<p>KaTeX is licensed under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
