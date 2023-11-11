@@ -3,11 +3,11 @@
   <title>Yemaster&#39;s Blog</title>
   
   <subtitle>技术萌新，边学边写</subtitle>
-  <link href="http://yemaster.oigat.cn/atom.xml" rel="self"/>
+  <link href="https://blog.yemaster.cn/atom.xml" rel="self"/>
   
-  <link href="http://yemaster.oigat.cn/"/>
+  <link href="https://blog.yemaster.cn/"/>
   <updated>2023-11-11T15:30:46.048Z</updated>
-  <id>http://yemaster.oigat.cn/</id>
+  <id>https://blog.yemaster.cn/</id>
   
   <author>
     <name>yemaster</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Miller Rabin算法</title>
-    <link href="http://yemaster.oigat.cn/miller-rabin/"/>
-    <id>http://yemaster.oigat.cn/miller-rabin/</id>
+    <link href="https://blog.yemaster.cn/miller-rabin/"/>
+    <id>https://blog.yemaster.cn/miller-rabin/</id>
     <published>2023-11-11T11:13:36.000Z</published>
     <updated>2023-11-11T15:30:46.048Z</updated>
     

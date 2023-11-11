@@ -3,12 +3,12 @@
 
 
     <sitemap>
-        <loc>http://yemaster.oigat.cn/post-sitemap.xml</loc>
+        <loc>https://blog.yemaster.cn/post-sitemap.xml</loc>
         <lastmod>2023-11-11T15:30:46.048Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yemaster.oigat.cn/page-sitemap.xml</loc>
+        <loc>https://blog.yemaster.cn/page-sitemap.xml</loc>
         <lastmod>2023-11-11T15:03:11.954Z</lastmod>
     </sitemap>
 
