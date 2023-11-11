@@ -18,37 +18,37 @@
 <p>Try out KaTeX <a href="https://katex.org/#demo">on the demo page</a>!</p>
 <h2 id="getting-started"><a class="markdownIt-Anchor" href="#getting-started"></a> Getting started</h2>
 <h3 id="starter-template"><a class="markdownIt-Anchor" href="#starter-template"></a> Starter template</h3>
-<pre class="highlight"><code class="html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
-<span class="hljs-comment">&lt;!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&quot;</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">&quot;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&quot;</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">&quot;anonymous&quot;</span>&gt;</span>
+<pre class="highlight"><code class="html"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>
+<span class="comment">&lt;!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly --&gt;</span>
+<span class="tag">&lt;<span class="name">html</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span>
 
-    <span class="hljs-comment">&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">defer</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&quot;</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">&quot;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&quot;</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">&quot;anonymous&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="comment">&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 
-    <span class="hljs-comment">&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">defer</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js&quot;</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">&quot;sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa&quot;</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">&quot;anonymous&quot;</span>
-        <span class="hljs-attr">onload</span>=<span class="hljs-string">&quot;renderMathInElement(document.body);&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="comment">&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>
+        <span class="attr">onload</span>=<span class="string">&quot;renderMathInElement(document.body);&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">head</span>&gt;</span>
   ...
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
 </code></pre>
 <p>You can also <a href="https://github.com/KaTeX/KaTeX/releases">download KaTeX</a> and host it yourself.</p>
 <p>For details on how to configure auto-render extension, refer to <a href="https://katex.org/docs/autorender.html">the documentation</a>.</p>
 <h3 id="api"><a class="markdownIt-Anchor" href="#api"></a> API</h3>
 <p>Call <code>katex.render</code> to render a TeX expression directly into a DOM element.<br />
 For example:</p>
-<pre class="highlight"><code class="js">katex.<span class="hljs-title function_">render</span>(<span class="hljs-string">&quot;c = \\pm\\sqrt{a^2 + b^2}&quot;</span>, element, {
-    <span class="hljs-attr">throwOnError</span>: <span class="hljs-literal">false</span>
+<pre class="highlight"><code class="js">katex.<span class="title function_">render</span>(<span class="string">&quot;c = \\pm\\sqrt{a^2 + b^2}&quot;</span>, element, {
+    <span class="attr">throwOnError</span>: <span class="literal">false</span>
 });
 </code></pre>
 <p>Call <code>katex.renderToString</code> to generate an HTML string of the rendered math,<br />
 e.g., for server-side rendering.  For example:</p>
-<pre class="highlight"><code class="js"><span class="hljs-keyword">var</span> html = katex.<span class="hljs-title function_">renderToString</span>(<span class="hljs-string">&quot;c = \\pm\\sqrt{a^2 + b^2}&quot;</span>, {
-    <span class="hljs-attr">throwOnError</span>: <span class="hljs-literal">false</span>
+<pre class="highlight"><code class="js"><span class="keyword">var</span> html = katex.<span class="title function_">renderToString</span>(<span class="string">&quot;c = \\pm\\sqrt{a^2 + b^2}&quot;</span>, {
+    <span class="attr">throwOnError</span>: <span class="literal">false</span>
 });
-<span class="hljs-comment">// &#x27;&lt;span class=&quot;katex&quot;&gt;...&lt;/span&gt;&#x27;</span>
+<span class="comment">// &#x27;&lt;span class=&quot;katex&quot;&gt;...&lt;/span&gt;&#x27;</span>
 </code></pre>
 <p>Make sure to include the CSS and font files in both cases.<br />
 If you are doing all rendering on the server, there is no need to include the<br />
